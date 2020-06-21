@@ -1,0 +1,135 @@
+
+/* Normalize.css End */
+
+/* Variables Start */
+
+:root {
+    --font-sans-serif: 'Montserrat', 'Helvetica', 'sans-serif';
+    --font-serif: 'Merriweather', 'serif';
+    --color-blue: #16275d;
+    --color-mid-blue: #223e99;
+    --color-light-blue: #d9e2ff;
+    --color-gray: #333;
+    --color-light-gray: #eee;
+    --color-error: #ff2961;
+    --bp-sm: 576px;
+    --bp-md: 768px;
+    --bp-lg: 992px;
+    --bp-xl: 1200px;
+}
+
+@media (max-width: 992px) {}
+
+/* Variables End */
+
+/* Structure Start */
+
+/*main {*/
+/*    margin: 0 30px;*/
+/*}*/
+
+/*@media (max-width: 992px) {*/
+/*    main {*/
+/*        margin: 0 15px;*/
+/*    }*/
+/*}*/
+
+.row {
+    display: flex;
+    margin: 0 -15px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.col {
+    padding: 0 15px;
+    flex: 1 1 auto;
+    max-width: 100%;
+}
+
+/* Structure End */
+
+/* Utility Start */
+
+body * {
+    color: #555;
+}
+
+@media screen and (max-width: 576px) {
+    html {
+        font-size: 110%;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    html {
+        font-size: 118%;
+    }
+}
+
+/* Utility End */
+
+.button-outline {
+    padding: 10px 20px;
+    border: 1px solid var(--color-blue);
+    color: var(--color-blue);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.button-outline:hover {
+    background: var(--color-blue);
+    color: #fff;
+}
+
+.button,
+.button-solid {
+    padding: 15px 30px;
+    border: none;
+    background: var(--color-blue);
+    color: #fff;
+    transition: all 0.3s ease;
+    font-family: var(--font-sans-serif);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transform: translateY(0);
+}
+
+.button:hover,
+.button-solid:hover {
+    background: var(--color-mid-blue);
+    color: #fff;
+}
+
+a.cta {
+    font-family: var(--font-sans-serif);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.formGroup.error input,
+.formGroup.error textarea {
+    transition: border 0.3s ease-in-out;
+    border: 1px solid var(--color-error);
+}
+
+.requiredHelpText {
+    font-size: 0.75rem;
+    margin-top: .75rem;
+}
+
+.requiredHelpText.hidden {
+    display: none;
+}
+
+.requiredHelpText.show {
+    display: block;
+}

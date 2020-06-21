@@ -1,0 +1,133 @@
+.nav {
+    justify-self: flex-end;
+    flex: 0;
+}
+
+.ul {
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+.li {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    /*padding: 10px;*/
+}
+
+.li + .li {
+    margin-left: 30px;
+}
+
+.link {
+    font-family: var(--font-sans-serif);
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.link:hover {
+    opacity: 0.75;
+}
+
+.li:last-child .link {
+    padding: 10px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.li:last-child .link:hover {
+    background: rgba(255,255,255,1);
+    color: #16275d;
+}
+
+.subMenu {
+    display: none;
+}
+
+.subMenuExpanded {
+    display: block;
+}
+
+.toggle {
+    display: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 993px) {
+    .subMenuExpanded,
+    .subMenu {
+        display: none !important;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .nav {
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 107px;
+        height: 0;
+        overflow: hidden;
+        transform: translateY(-30px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        opacity: 0;
+        z-index: 5;
+        font-size: 0.9rem;
+    }
+
+    .li {
+        position: relative;
+    }
+
+    .menu-active {
+        transform: translateY(0);
+        padding: 15px 30px 30px;
+        background: linear-gradient(180deg, var(--color-blue), #0c1531);
+        opacity: 1;
+        height: auto;
+    }
+
+    .menu-active .ul {
+        flex-direction: column;
+    }
+
+    .nav.menu-active li + li {
+        margin-left: 0;
+    }
+
+    .menu-active li {
+        text-align: center;
+    }
+
+    .menu-active li:last-child {
+        margin-top: 20px;
+    }
+
+    .menu-active a {
+        display: block;
+        padding: 5px;
+    }
+
+    .toggle {
+        display: block;
+        font-size: 1.4rem;
+        color: #fff;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .toggle:after {
+        content: '+';
+        display: inline-block;
+    }
+
+}

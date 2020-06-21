@@ -1,0 +1,41 @@
+.ctaCol {
+    padding: 15px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+.cta {
+    padding: 100px;
+    border: 1px solid #ddd;
+    background: rgba(255,255,255,0.8);
+}
+
+.cta h2 {
+    font-size: 2rem;
+    color: var(--color-blue);
+}
+
+.cta p > a {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.footer {
+    margin-top: -250px;
+    padding: 280px 100px 80px 100px;
+    background: var(--color-blue);
+}
+
+@media screen and (max-width: 576px) {
+    .cta {
+        padding: 60px 30px;
+    }
+
+    .cta h2 {
+        font-size: 1.8rem;
+    }
+
+    .cta p {
+        font-size: 1rem;
+    }
+}

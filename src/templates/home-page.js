@@ -5,33 +5,35 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ServiceListing from "../components/ServiceListing"
+import CTA from "../components/CTA"
 
 const IndexPage = ({data}) => {
-  const {frontmatter} = data.markdownRemark
-  console.log(frontmatter)
+    const {frontmatter} = data.markdownRemark
+    console.log(frontmatter)
 
-  return (
-  <Layout>
-    <SEO title="Home" />
-    {frontmatter.title && <h1>{frontmatter.title}</h1>}
-    {frontmatter.hero && frontmatter.hero.heading && <h1>{frontmatter.hero.heading}</h1>}
-    {frontmatter.hero && frontmatter.hero.subheading && <h4>{frontmatter.hero.subheading}</h4>}
-    {
-        frontmatter.hero &&
-        frontmatter.hero.heroImage &&
-        frontmatter.hero.heroImage.childImageSharp &&
-        frontmatter.hero.heroImage.childImageSharp.fixed &&
-        <Img fixed={frontmatter.hero.heroImage.childImageSharp.fixed}/>
-    }
-    <ServiceListing/>
-  </Layout>
-  )
+    return (
+        <Layout>
+            <SEO title="Home" />
+            {frontmatter.title && <h1>{frontmatter.title}</h1>}
+            {frontmatter.hero && frontmatter.hero.heading && <h1>{frontmatter.hero.heading}</h1>}
+            {frontmatter.hero && frontmatter.hero.subheading && <h4>{frontmatter.hero.subheading}</h4>}
+            {
+                frontmatter.hero &&
+                frontmatter.hero.heroImage &&
+                frontmatter.hero.heroImage.childImageSharp &&
+                frontmatter.hero.heroImage.childImageSharp.fixed &&
+                <Img fixed={frontmatter.hero.heroImage.childImageSharp.fixed}/>
+            }
+            <ServiceListing/>
+            <CTA/>
+        </Layout>
+    )
 }
 
 export default IndexPage
 
 export const pageQuery = graphql`
-query HomeQuery {
+query HomePageQuery {
   markdownRemark(frontmatter: {templateKey: {eq: "home-page"}}) {
     frontmatter {
       title

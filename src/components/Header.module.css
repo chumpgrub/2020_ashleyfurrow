@@ -1,0 +1,122 @@
+.header {
+    position: relative;
+    padding: 0 30px;
+    background: var(--color-blue);
+    z-index: 10;
+}
+
+@media (max-width: 992px) {
+    .header {
+        padding: 0;
+    }
+}
+
+.row-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+}
+
+@media (max-width: 576px) {
+    .row-header {
+        padding-top: 10px;
+        padding-bottom: 15px;
+    }
+}
+
+@media (min-width: 993px) {
+    .row-header {
+        padding: 20px 0;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .row-header > div:first-of-type {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.site-brand {
+    margin-bottom: 0.25rem;
+    font-family: var(--font-sans-serif);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+@media (max-width: 576px) {
+    /*.site-brand {*/
+    /*    font-size: 1.1rem;*/
+    /*}*/
+    .site-brand span {
+        display: none;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .site-brand {
+        /*font-size: 1.2rem;*/
+    }
+}
+
+.home-link,
+.home-link span {
+    text-decoration: none;
+    color: #fff;
+}
+
+.site-description {
+    /*font-family: "futura-pt", sans-serif;*/
+    font-family: var(--font-sans-serif);
+    font-weight: 100;
+    font-size: 0.75rem;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+@media (max-width: 576px) {
+    .site-description {
+        /*font-size: 0.65rem;*/
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .site-description {
+        /*font-size: 0.7rem;*/
+    }
+}
+
+.menu-trigger {
+    display: none;
+    padding: 10px;
+    width: 60px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.menu-trigger:focus {
+    outline: none;
+}
+
+.menu-trigger span,
+.menu-trigger:before,
+.menu-trigger:after {
+    display: block;
+    margin: 10px 0;
+    height: 1px;
+    background: #fff;
+}
+
+.menu-trigger:before,
+.menu-trigger:after {
+    content: '';
+}
+
+@media (max-width: 992px) {
+    .menu-trigger {
+        display: block;
+    }
+}
