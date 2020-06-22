@@ -1,31 +1,49 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import {graphql} from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Hero from "../components/Hero"
 import ServiceListing from "../components/ServiceListing"
+import CTA from "../components/CTA"
+
+import styles from "./index.module.css"
 
 const IndexPage = ({data}) => {
-  const {frontmatter} = data.markdownRemark
-  console.log(frontmatter)
 
-  return (
-  <Layout>
-    <SEO title="Home" />
-    {frontmatter.title && <h1>{frontmatter.title}</h1>}
-    {frontmatter.hero && frontmatter.hero.heading && <h1>{frontmatter.hero.heading}</h1>}
-    {frontmatter.hero && frontmatter.hero.subheading && <h4>{frontmatter.hero.subheading}</h4>}
-    {
-        frontmatter.hero &&
-        frontmatter.hero.heroImage &&
-        frontmatter.hero.heroImage.childImageSharp &&
-        frontmatter.hero.heroImage.childImageSharp.fixed &&
-        <Img fixed={frontmatter.hero.heroImage.childImageSharp.fixed}/>
-    }
-    <ServiceListing/>
-  </Layout>
-  )
+    const {frontmatter} = data.markdownRemark
+    const {testimony, testimonialImage} = frontmatter.testimonial
+    const {heading, content} = frontmatter.services
+
+    return (
+        <Layout>
+            <SEO title="Home"/>
+            {
+                frontmatter &&
+                frontmatter.hero &&
+                <Hero data={frontmatter.hero}/>
+            }
+            <section className={styles.homeContainer}>
+                <div className="container">
+                    <div className={`row ${styles.row}`}>
+                        {
+                            testimonialImage &&
+                            testimonialImage.childImageSharp &&
+                            testimonialImage.childImageSharp.fixed &&
+                                <Img className={styles.testimonyImage}
+                                     fixed={testimonialImage.childImageSharp.fixed}
+                                />
+                        }
+                        <div className={`col ${styles.body}`}>
+                            <p>{testimony}</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <ServiceListing heading={heading} content={content}/>
+        </Layout>
+    )
 }
 
 export default IndexPage
@@ -61,6 +79,10 @@ query HomeQuery {
             }
           }
         }
+      }
+      services {
+        heading
+        content
       }
     }
     html

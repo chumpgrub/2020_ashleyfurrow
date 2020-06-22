@@ -1,5 +1,6 @@
 ---
 templateKey: service
+pageID: service-homeschooling
 title: Homeschooling
 slug: /services/homeschooling/
 order: 8

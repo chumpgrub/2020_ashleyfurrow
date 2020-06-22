@@ -4,6 +4,7 @@ import {Link, useStaticQuery, graphql} from 'gatsby'
 import styles from './CTA.module.css'
 
 const CTA = () => {
+
     const data = useStaticQuery(graphql`
     query MyQuery {
       markdownRemark(frontmatter: {templateKey: {eq: "home-page"}}) {

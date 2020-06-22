@@ -1,5 +1,6 @@
 ---
 templateKey: service
+pageID: service-consulting
 title: Consulting
 slug: /services/consulting/
 order: 6

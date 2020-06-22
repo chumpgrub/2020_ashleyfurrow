@@ -1,0 +1,41 @@
+.form {
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.label {
+    font-family: var(--font-sans-serif);
+    color: var(--color-gray);
+    text-transform: uppercase;
+}
+
+.required {
+    color: var(--color-error);
+}
+
+.inputBase {
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    font-size: 16px;
+    outline: none;
+}
+
+.textAreaBase {
+    padding: 10px 20px;
+    min-height: 200px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    resize: vertical;
+}
+
+.formResponse {
+    text-align: center;
+}

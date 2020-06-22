@@ -1,5 +1,6 @@
 ---
-templateKey: standard
+templateKey: standard-page
+pageID: about
 title: About
 slug: /about/
 ---

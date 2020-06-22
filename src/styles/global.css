@@ -60,6 +60,15 @@ body * {
     color: #555;
 }
 
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+    color: #222;
+}
+
 @media screen and (max-width: 576px) {
     html {
         font-size: 110%;

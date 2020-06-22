@@ -1,5 +1,6 @@
 ---
 templateKey: home-page
+pageID: home
 slug: "/"
 title: "Home Page"
 hero:
@@ -10,6 +11,9 @@ testimonial:
   testimonialImage: ../images/ashley-square.jpg
   testimony: >
     I love what I do. Students love what I do too, because they feel listened to and understood. They know that I am on their side and that I will help them to learn how to unlock learning.
+services:
+  heading: Educational Services I Provide
+  content: Introductory message about the services that Ashley provides.
 ctaImage: ../images/cta-map.jpg
 cta:
   headline: "Invitation to work together."

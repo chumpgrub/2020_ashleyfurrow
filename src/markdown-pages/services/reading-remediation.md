@@ -1,5 +1,6 @@
 ---
 templateKey: service
+pageID: service-reading-remediation
 title: Reading Remediation
 slug: /services/reading-remediation/
 order: 4

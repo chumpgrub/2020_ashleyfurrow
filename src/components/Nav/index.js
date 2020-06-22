@@ -9,7 +9,7 @@ const NavItem = ({item}) => {
 
     return (
         <>
-            <Link to={item.url} alt={item.name} className={styles.link}>
+            <Link to={item.link} alt={item.name} className={styles.link}>
                 {item.name}
             </Link>
             { item.menuLinks && <span className={styles.toggle} onClick={() => setCollapse(!collapse)}></span> }
@@ -29,7 +29,7 @@ const NavSubMenu = ({children, collapse}) => {
                     item => {
                         return (
                             <li key={item.object_id} className={styles.li}>
-                                <Link to={item.url} alt={item.name} className={styles.link}>
+                                <Link to={item.link} alt={item.name} className={styles.link}>
                                     {item.name}
                                 </Link>
                             </li>

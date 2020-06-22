@@ -1,0 +1,10 @@
+.footer {
+    margin-top: -250px;
+    padding: 280px 100px 80px 100px;
+    background: var(--color-blue);
+    text-align: center;
+}
+
+.footer small {
+    color: rgba(255, 255, 255, 0.75);
+}

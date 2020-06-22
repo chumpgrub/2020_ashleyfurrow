@@ -5,7 +5,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const ServicePage = ({data}) => {
-    console.log(data)
 
     const {title, intro} = data.markdownRemark.frontmatter
     const html = data.markdownRemark.html

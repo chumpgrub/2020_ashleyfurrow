@@ -2,7 +2,7 @@ import React, {useState, useEffect, useRef} from "react"
 import {Link} from "gatsby"
 import PropTypes from "prop-types"
 
-import Nav from "./Nav"
+import Nav from "../Nav"
 
 import styles from "./Header.module.css"
 

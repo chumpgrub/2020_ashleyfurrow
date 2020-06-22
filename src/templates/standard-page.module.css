@@ -1,0 +1,9 @@
+.main {
+    padding: 4rem 2rem;
+    background: linear-gradient(180deg, #fff, var(--color-light-gray));
+}
+
+.content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
