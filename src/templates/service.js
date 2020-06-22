@@ -3,6 +3,7 @@ import {graphql} from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import styles from "./standard-page.module.css";
 
 const ServicePage = ({data}) => {
 
@@ -11,12 +12,16 @@ const ServicePage = ({data}) => {
 
     return (
         <Layout>
-            <SEO title={`${title} | Ashley Alexander Furrow`} />
-            <h1>{title}</h1>
-            <h4>{intro}</h4>
-            <div className="entry"
-                 dangerouslySetInnerHTML={{__html: html}}
-            />
+            <SEO title={`${title} | Ashley Alexander Furrow`}/>
+            <div className={styles.main}>
+                <div className={styles.content}>
+                    <h1>{title}</h1>
+                    <h4>{intro}</h4>
+                    <div className="entry"
+                         dangerouslySetInnerHTML={{__html: html}}
+                    />
+                </div>
+            </div>
         </Layout>
     )
 }

@@ -6,7 +6,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/Hero"
 import ServiceListing from "../components/ServiceListing"
-import CTA from "../components/CTA"
 
 import styles from "./index.module.css"
 
@@ -41,14 +40,16 @@ const IndexPage = ({data}) => {
                     </div>
                 </div>
             </section>
-            <ServiceListing heading={heading} content={content}/>
+            <div className={styles.servicesWrapper}>
+                <ServiceListing heading={heading} content={content}/>
+            </div>
         </Layout>
     )
 }
 
 export default IndexPage
 
-export const pageQuery = graphql`
+export const HomePageQuery = graphql`
 query HomeQuery {
   markdownRemark(frontmatter: {templateKey: {eq: "home-page"}}) {
     frontmatter {
