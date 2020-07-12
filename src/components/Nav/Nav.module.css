@@ -32,17 +32,19 @@
     opacity: 0.75;
 }
 
-.li:last-child .link {
-    padding: 10px 20px;
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-}
+@media screen and (min-width: 993px) {
+    .li:last-child .link {
+        padding: 10px 20px;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+    }
 
-.li:last-child .link:hover {
-    background: rgba(255,255,255,1);
-    color: #16275d;
+    .li:last-child .link:hover {
+        background: rgba(255,255,255,1);
+        color: #16275d;
+    }
 }
 
 .subMenu {
@@ -81,15 +83,29 @@
         opacity: 0;
         z-index: 5;
         font-size: 0.9rem;
+        padding: 0 0 20px 0;
+    }
+
+    .nav > ul > li:last-of-type {
+        padding: 15px 15px 0 15px
+    }
+
+    .nav > ul > li:last-of-type a {
+        padding: 10px 20px;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        text-align: center;
     }
 
     .li {
         position: relative;
+        align-items: flex-start;
     }
 
     .menu-active {
         transform: translateY(0);
-        padding: 15px 30px 30px;
         background: linear-gradient(180deg, var(--color-blue), #0c1531);
         opacity: 1;
         height: auto;
@@ -104,16 +120,13 @@
     }
 
     .menu-active li {
-        text-align: center;
-    }
-
-    .menu-active li:last-child {
-        margin-top: 20px;
+        flex-direction: column;
     }
 
     .menu-active a {
         display: block;
-        padding: 5px;
+        padding: 5px 15px;
+        width: 100%;
     }
 
     .toggle {
@@ -123,11 +136,28 @@
         position: absolute;
         right: 0;
         top: 0;
+        line-height: 0.7;
+        height: 38px;
     }
 
     .toggle:after {
         content: '+';
         display: inline-block;
     }
+
+    .linkOpen + span:after {
+        content: '-';
+    }
+
+    .subMenuExpanded {
+        display: block;
+        margin: 0 0 0.75rem 1rem !important;
+        width: 100%;
+    }
+
+    .subMenuExpanded li {
+        font-size: 14px;
+    }
+
 
 }

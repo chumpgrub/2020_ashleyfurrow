@@ -12,6 +12,8 @@ const Header = () => {
     const [height, setHeight] = useState(0)
     const ref = useRef(null)
 
+    const triggerClass = menuOpen ? styles.menuTriggerOpen : styles.menuTrigger
+
     useEffect(() => {
         setHeight(ref.current.clientHeight)
     }, [])
@@ -24,11 +26,11 @@ const Header = () => {
                         <span className={styles.siteBrand}>
                             <Link className={styles.homeLink} to="/">Ashley <span>Alexander</span> Furrow, PhD</Link>
                         </span>
-                        <div className={styles.siteDescription}>Education & Reading Specialist</div>
+                        <div className={styles.siteDescription}>Educator, Learning Specialist, Education Consultant</div>
                     </div>
                     <Nav menu={menuOpen}
                          offset={height}/>
-                    <button className={styles.menuTrigger}
+                    <button className={triggerClass}
                             onClick={() => handleClick(!menuOpen)}
                     ><span></span></button>
                 </div>

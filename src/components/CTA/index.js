@@ -45,7 +45,7 @@ const CTA = () => {
                             <div className={`cta ${styles.cta}`}>
                                 <h2>{headline}</h2>
                                 <p dangerouslySetInnerHTML={{__html: content}}/>
-                                <a href={link.url} className="button">{link.text}</a>
+                                <Link to={link.url} className="button">{link.text}</Link>
                             </div>
                         </div>
                     </div>

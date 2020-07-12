@@ -16,8 +16,8 @@ const Hero = ({data}) => data && (
                     {
                         data.heroImage &&
                         data.heroImage.childImageSharp &&
-                        data.heroImage.childImageSharp.fixed &&
-                        <Img fixed={data.heroImage.childImageSharp.fixed}/>
+                        data.heroImage.childImageSharp.fluid &&
+                        <Img fluid={data.heroImage.childImageSharp.fluid}/>
                     }
                 </div>
             </div>

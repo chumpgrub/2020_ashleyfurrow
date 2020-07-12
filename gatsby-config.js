@@ -31,6 +31,10 @@ module.exports = {
             link: `/services/consulting/`,
           },
           {
+            name: `Assessment`,
+            link: `/services/assessment/`,
+          },
+          {
             name: `Reading Remediation`,
             link: `/services/reading-remediation/`,
           },
@@ -39,16 +43,8 @@ module.exports = {
             link: `/services/executive-functioning/`,
           },
           {
-            name: `Homeschooling`,
-            link: `/services/homeschooling/`,
-          },
-          {
             name: `Test Prep`,
             link: `/services/test-prep/`,
-          },
-          {
-            name: `Assessment`,
-            link: `/services/assessment/`,
           },
         ]
       },
@@ -74,7 +70,23 @@ module.exports = {
         path: `${__dirname}/src/markdown-pages`,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+            `gatsby-remark-relative-images`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 600,
+            },
+          },
+        ],
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

@@ -2,7 +2,5 @@
 templateKey: standard-page
 pageID: contact
 slug: "/contact/"
-title: Contact Page
+title: Get In Touch
 ---
-
-Get in touch!

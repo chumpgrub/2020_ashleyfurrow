@@ -3,13 +3,18 @@ templateKey: service
 pageID: service-executive-functioning
 title: Executive Functioning
 slug: /services/executive-functioning/
-order: 3
+order: 5
 excerpt: I help students to plan, organize and feel excited about rather than consumed by all they have to do. 
 teaserImage: ../../images/service-executive-functioning.jpg
 intro: Many parents come to me and tell me that their child is very bright, an excellent reader, confident in math, but that they continually forget to turn in their homework, or leave projects until the night before they are due.
 ---
 
 The parents are exasperated and feel that their child just isn’t trying. In general children want to be successful. It is unlikely that they simply aren’t trying, but very likely that they have underdeveloped executive functioning skills. What are executive functioning skills?
+
+<blockquote>
+<p>My son started seeing Ashley when he was in 6th grade and had been diagnosed with ADHD.  He was having trouble with ‘executive function’ tasks, very disorganized and couldn’t keep track of assignments and papers, and not getting assignments in on time.  He started seeing Ashley a couple of times a week and she helped him to develop skills to stay organized and plan his assignments so that he could get his work in on time.  She was always patient and helpful with him and it was a huge help for me in that I no longer had to stand over him to get his homework done.  He is a sophomore in high school now and gets straight A’s and is on the A honor roll.  We still see Ashley (although not quite as often) to make sure he’s staying on track and for ACT/SAT prep and to help with college selection. I highly recommend Ashley.</p>
+<p class="source">Parent of 10th Grader</p>
+</blockquote>
 
 From the Center on the Developing Child, Harvard University:
 

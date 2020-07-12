@@ -3,7 +3,7 @@ templateKey: service
 pageID: service-test-prep
 title: Test Prep
 slug: /services/test-prep/
-order: 5
+order: 6
 excerpt: From dealing with testing anxiety to a concrete method for approachingquestions, I can help students tackle the test.
 teaserImage: ../../images/service-test-prep.jpg
 intro: I offer preparation on a variety of standardized tests. These include High School entrance exams for selective enrolment, private schools, and the Archdiocese schools; the ISEE; and the ACT.

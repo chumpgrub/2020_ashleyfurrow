@@ -3,7 +3,7 @@ templateKey: service
 pageID: service-assessment
 title: Assessment
 slug: /services/assessment/
-order: 2
+order: 3
 excerpt: This process helps pinpoint exactly where your child needs some help. It also highlights their strengths. This is the starting point for any remediation.
 teaserImage: ../../images/service-assessment.jpg
 intro: I use a variety of assessment tools to get to know exactly where a learner needs help.

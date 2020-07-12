@@ -16,7 +16,7 @@ const ServicePage = ({data}) => {
             <div className={styles.main}>
                 <div className={styles.content}>
                     <h1>{title}</h1>
-                    <h4>{intro}</h4>
+                    {intro && <h4 className={`intro`}>{intro}</h4>}
                     <div className="entry"
                          dangerouslySetInnerHTML={{__html: html}}
                     />

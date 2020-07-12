@@ -6,10 +6,11 @@ import styles from "./Nav.module.css"
 const NavItem = ({item}) => {
 
     const [collapse, setCollapse] = useState(true)
+    const menuItemClass = collapse ? styles.link : styles.linkOpen
 
     return (
         <>
-            <Link to={item.link} alt={item.name} className={styles.link}>
+            <Link to={item.link} alt={item.name} className={`${styles.link} ${menuItemClass}`}>
                 {item.name}
             </Link>
             { item.menuLinks && <span className={styles.toggle} onClick={() => setCollapse(!collapse)}></span> }

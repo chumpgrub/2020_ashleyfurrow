@@ -7,6 +7,7 @@
 }
 
 .home-container {
+    padding: 6rem 0;
     background: var(--color-light-gray);
 }
 
@@ -16,8 +17,6 @@
 }
 
 .body {
-    padding-top: 100px;
-    padding-bottom: 100px;
     margin: 0 auto 0 60px;
     max-width: 1000px;
     flex: 1 1 80%;
@@ -77,6 +76,7 @@
     .body a {
         font-size: 0.85rem;
     }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -91,5 +91,11 @@
 
     .body {
         padding-top: 60px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .row {
+        align-items: center;
     }
 }

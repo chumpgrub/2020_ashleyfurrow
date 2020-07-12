@@ -13,17 +13,13 @@ testimonial:
     I love what I do. Students love what I do too, because they feel listened to and understood. They know that I am on their side and that I will help them to learn how to unlock learning.
 services:
   heading: Educational Services I Provide
-  content: Introductory message about the services that Ashley provides.
+  content: Here are some ways I can help.
 ctaImage: ../images/cta-map.jpg
 cta:
-  headline: "Invitation to work together."
+  headline: "How Can I Help?"
   content: >
-    Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod.
+    Take the next step towards helping your child succeed.
   link:
     text: "Get in touch"
     url: "/contact/"
 ---
-
-Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum.
-
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper.

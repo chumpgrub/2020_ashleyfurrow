@@ -1,0 +1,44 @@
+.section {
+    padding: 4rem 0;
+}
+
+.box {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 15px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    border: 1px solid #ddd;
+}
+
+.image {
+    flex: 0 0 200px;
+    max-width: 200px;
+    margin-left: 2rem;
+}
+
+@media (max-width: 768px) {
+
+    .box {
+        margin: 0 -1rem;
+    }
+
+    .row {
+        flex-direction: column-reverse;
+        padding: 1rem;
+    }
+
+    .image {
+        flex: 0 0 300px;
+        max-width: 300px;
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 2rem;
+    }
+}

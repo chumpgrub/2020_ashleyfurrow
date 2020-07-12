@@ -110,6 +110,10 @@
     background: #fff;
 }
 
+.menuTriggerOpen {
+    display: none;
+}
+
 .menu-trigger:before,
 .menu-trigger:after {
     content: '';
@@ -118,5 +122,47 @@
 @media (max-width: 992px) {
     .menu-trigger {
         display: block;
+        margin-right: -10px;
+    }
+
+    .menuTriggerOpen {
+        display: block;
+        margin-right: -10px;
+        padding: 10px;
+        width: 60px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .menuTriggerOpen:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    .menuTriggerOpen span {
+        background: none;
+    }
+
+    .menuTriggerOpen:before,
+    .menuTriggerOpen:after {
+        position: relative;
+        content: '';
+        display: block;
+        margin: 10px 0;
+        height: 1px;
+        background: #fff;
+        transform-origin: center;
+    }
+
+    .menuTriggerOpen:before {
+        transform: rotate(45deg);
+        top: 5px;
+    }
+
+    .menuTriggerOpen:after {
+        transform: rotate(-45deg);
+        bottom: 5px;
     }
 }

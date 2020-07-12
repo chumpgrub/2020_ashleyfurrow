@@ -60,8 +60,8 @@ query HomeQuery {
         subheading
         heroImage {
           childImageSharp {
-            fixed(width: 300) {
-                ...GatsbyImageSharpFixed
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
             }
           }
         }

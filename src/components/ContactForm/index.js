@@ -1,17 +1,6 @@
 import React, {Fragment, useState} from 'react'
-// import gql from 'graphql-tag'
-// import {Mutation} from 'react-apollo'
 
 import styles from './ContactForm.module.css'
-
-// const CONTACT_MUTATION = gql`
-//     mutation CreateSubmissionMutation($clientMutationId: String!, $name: String!, $email: String!, $interest: String!, $message: String!) {
-//         createSubmission(input: {clientMutationId: $clientMutationId, name: $name, email: $email, interest: $interest, message: $message}) {
-//             success
-//             data
-//         }
-//     }
-// `
 
 const validateEmail = (email) => {
     const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -33,24 +22,22 @@ const ContactForm = () => {
 
     const [errors, setErrors] = useState({name: false, email: false, interest: false, message: false})
 
-    const checkSubmitValues = (values) => {
-
-    }
-
     return (
         <Fragment>
             <form
+                action="https://getform.io/f/7a95e7d6-4125-48d6-963e-3c68eeb86412"
+                method="POST"
                 className={styles.form}
                 style={{
                     display: messageSent ? 'none' : 'block',
                     backgroundColor: messageSent ? 'green' : 'transparent'
                 }}
                 onSubmit={async event => {
-                    event.preventDefault()
 
                     let validated = true
 
                     Object.keys(errors).forEach((key, index) => {
+
                         if (!errors[key]) {
                             switch (key) {
                                 case 'name':
@@ -73,7 +60,8 @@ const ContactForm = () => {
                         }
                     })
 
-                    if (validated) {
+                    if (!validated) {
+                        event.preventDefault()
                     }
 
                 }}
@@ -83,6 +71,7 @@ const ContactForm = () => {
                     <input id="nameInput"
                            className={styles.inputBase}
                            value={nameValue}
+                           name={`name`}
                            onChange={event => {
                                setNameValue(event.target.value)
                            }}
@@ -107,6 +96,7 @@ const ContactForm = () => {
                     <input id="emailInput"
                            className={styles.inputBase}
                            value={emailValue}
+                           name={`email`}
                            onChange={event => {
                                setEmailValue(event.target.value)
                            }}
@@ -131,6 +121,7 @@ const ContactForm = () => {
                     <input id="interestInput"
                            className={styles.inputBase}
                            value={interestValue}
+                           name={`interest`}
                            onChange={event => {
                                setInterestValue(event.target.value)
                            }}
@@ -156,6 +147,7 @@ const ContactForm = () => {
                     <textarea id="messageInput"
                               className={styles.textAreaBase}
                               value={messageValue}
+                              name={`message`}
                               onChange={event => {
                                   setMessageValue(event.target.value)
                               }}
@@ -175,11 +167,9 @@ const ContactForm = () => {
                         provide some context to your inquiry.
                     </small>
                 </div>
-
                 <button className={`button-solid`} type="submit">Send Message</button>
             </form>
-            <div className={`${styles.formResponse}`}>
-            </div>
+            <div className={`${styles.formResponse}`}></div>
         </Fragment>
     )
 }
