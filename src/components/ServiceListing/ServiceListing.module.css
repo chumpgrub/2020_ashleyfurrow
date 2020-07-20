@@ -51,7 +51,7 @@
 .row h3:after {
     transition: margin-left 0.3s ease;
     content: '\0203A';
-    display: inline-block;
+    display: inline;
     margin-left: 8px;
 }
 

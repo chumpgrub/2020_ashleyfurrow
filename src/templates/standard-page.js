@@ -6,6 +6,7 @@ import {graphql} from "gatsby";
 
 import AntiRacistToolkit from "../components/AntiRacistToolkit"
 import AboutExtra from "../components/About/AboutExtra"
+import ClassroomPortfolio from "../components/ClassroomPortfolio"
 import Services from "../components/ServiceListing"
 import ContactForm from "../components/ContactForm"
 
@@ -21,6 +22,9 @@ const StandardPage = ({data}) => {
         case 'about':
             extraContent = <div><AntiRacistToolkit/><AboutExtra/></div>
             break;
+        case 'about-portfolio':
+            extraContent = <ClassroomPortfolio/>
+            break;
         case 'services':
             extraContent = <Services/>
             break;
@@ -31,12 +35,14 @@ const StandardPage = ({data}) => {
             break;
     }
 
+    const h1Style = (pageID == 'contact') ? {maxWidth: 800, margin: '0 auto 1.8rem auto'} : null
+
     return (
         <Layout>
             <SEO title={`${title} | Ashley Alexander Furrow`} />
             <div className={styles.main}>
                 <div className={styles.content}>
-                    <h1>{title}</h1>
+                    <h1 style={h1Style}>{title}</h1>
                     {intro && <h4 className={`intro`}>{intro}</h4>}
                     <div className="entry"
                          dangerouslySetInnerHTML={{__html: html}}

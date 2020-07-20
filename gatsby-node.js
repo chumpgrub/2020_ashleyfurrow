@@ -35,7 +35,7 @@ exports.createPages = ({ actions, graphql }) => {
       const id = edge.node.id
       const templateKey = edge.node.frontmatter.templateKey
 
-      if (templateKey === 'partial') return
+      if (templateKey === 'partial' || templateKey === 'portfolio') return
 
       createPage({
         path: edge.node.fields.slug,
