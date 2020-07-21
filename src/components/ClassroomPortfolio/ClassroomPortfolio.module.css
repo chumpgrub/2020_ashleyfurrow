@@ -59,3 +59,13 @@
     font-size: 0.75rem;
     opacity: 0.8;
 }
+
+@media screen and (max-width: 576px) {
+    .projectInner {
+        flex-direction: column;
+    }
+
+    .projectImageShadow {
+        margin: 2rem 2rem 0 2rem;
+    }
+}
