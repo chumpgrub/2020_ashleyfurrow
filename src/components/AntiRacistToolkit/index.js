@@ -31,8 +31,6 @@ const AntiRacistToolkit = () => {
 
     const {frontmatter, html} = data.markdownRemark
 
-    console.log(frontmatter, html)
-
     return (
         <section className={styles.section}>
             <div className={styles.box}>
