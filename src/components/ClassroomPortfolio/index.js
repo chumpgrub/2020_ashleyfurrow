@@ -21,7 +21,6 @@ const ClassroomPortfolio = () => {
           node {
             frontmatter {
               title
-              tags
               pdf
               excerpt
               teaserImage {
@@ -68,7 +67,7 @@ const ClassroomPortfolio = () => {
                                     }
                                 </div>
                                 <div className={styles.projectContent}>
-                                    {hasTags && <ProjectTags tags={project.node.frontmatter.tags}/>}
+                                    {1 == 2 && hasTags && <ProjectTags tags={project.node.frontmatter.tags}/>}
                                     <h3 className={styles.projectHeadline}>
                                         {project.node.frontmatter.title}
                                     </h3>
