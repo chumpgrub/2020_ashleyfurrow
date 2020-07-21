@@ -35,7 +35,7 @@ const AntiRacistToolkit = () => {
         <section className={styles.section}>
             <div className={styles.box}>
                 <div className={styles.row}>
-                    <div>
+                    <div style={{'flexGrow':'1'}}>
                         {frontmatter.title && <h3>{frontmatter.title}</h3>}
                         {html && <div dangerouslySetInnerHTML={{__html: html}}/>}
                         {frontmatter.link &&
