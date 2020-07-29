@@ -71,12 +71,7 @@ query HomeQuery {
         testimonialImage {
           childImageSharp {
             fixed(width: 200) {
-              base64
-              tracedSVG
-              aspectRatio
-              srcWebp
-              srcSetWebp
-              originalName
+              ...GatsbyImageSharpFixed_withWebp
             }
           }
         }
